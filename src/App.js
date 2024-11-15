@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Nav from './componentes/Nav';
+import Footer from './componentes/Footer';
+import Homepage from './componentes/Homepage';
+import Especiales from './componentes/Especiales';
+import Testimonials from './componentes/Testimonials';
+import BookingPage from './componentes/BookingPage';
+import ConfirmedBooking from './componentes/ConfirmedBooking';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Nav/>
+      <Routes>
+        <Route path="/" element={<Homepage/>} />
+        <Route path="/especiales" element={<Especiales/>} />
+        <Route path="/testimonials" element={<Testimonials/>} />
+        <Route path="/reserve" element={<BookingPage />} /> {/* Ruta a la página de reservas */}
+        <Route path="/confirmation" element={<ConfirmedBooking />} />
+      </Routes>
+      <Footer/>
+    </>
+
+
+
   );
 }
 

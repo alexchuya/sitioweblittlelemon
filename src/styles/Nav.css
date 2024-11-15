@@ -1,0 +1,25 @@
+/* Encabezado */
+.header {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 7 columnas */
+  gap: 2.5rem;
+  background-color: #EDEFEE;
+  padding: 1rem;
+  padding-left: 15rem;
+  padding-right: 15rem;
+}
+
+.header-logo {
+  grid-column: 1 / 2; /* Primera columna */
+}
+
+.header-logo img {
+  width: 100%; /* Ajusta la imagen al tamaño del contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.header-item {
+  background-color: #EDEFEE;
+  text-align: center;
+  padding: 0.5rem;
+}

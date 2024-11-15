@@ -1,0 +1,80 @@
+/* Footer */
+.footer {
+  background-color: rgb(18, 18, 20); /* Fondo negro */
+  color: #fff; /* Texto blanco */
+  display: grid;
+  grid-template-areas: " restaurant navigation contact ";
+  place-items: center;
+  padding-left: 10rem;
+  padding-right: 10rem;
+  
+  
+}
+
+
+.footer-imagen{
+  overflow: visible; /* Permite que el contenido sobresalga del contenedor */
+  grid-area: restaurant;
+}
+
+.footer-imagen img {
+  max-width: 70%; /* Asegura que la imagen no se desborde del contenedor hijo */
+  height: 15rem;
+
+}
+
+
+.footer-navigation {
+  grid-area: navigation;
+
+}
+
+.footer-contact {
+  grid-area: contact;
+}
+
+.footer .footer-column h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #f4ce14;
+}
+
+.footer .footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+.LinkStyle {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.footer .footer-column ul li a:hover {
+  color: #f4ce14;
+}
+
+.footer .social-media {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.footer .social-media a {
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer .social-media a:hover {
+  color: #f4ce14;
+}
+
+/* Estilo para íconos */
+.footer .social-media a i {
+  font-size: 2rem;
+}

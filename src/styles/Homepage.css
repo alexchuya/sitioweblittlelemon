@@ -1,0 +1,71 @@
+
+.content-row {
+    background-color: #2f4f4f;
+    display: grid;
+    place-items: center;
+    grid-template-areas: 
+        "content-text content-image";
+    padding: 5rem;
+    
+  
+  }
+  
+  .content-text {
+    width: 70%;
+    grid-area:  content-text;
+  
+  }
+  
+  .content-image {
+    grid-area: content-image;
+    padding-right: 8rem;
+
+  }
+  
+  .content-text h1 {
+  
+    color: #f4ce14;
+    font-size: 3.5rem; /* 2rem = 32px */
+    margin-top: 0;    /* Elimina el margen superior */
+    margin-bottom: 0.5rem; /* Ajusta el margen inferior para reducir el espacio */
+    padding: 0;       /* Elimina el padding si es necesario */
+  
+  }
+  
+  .content-text h2 {
+    color: #fff;
+    margin-bottom: 0.5rem; /* Ajusta el margen inferior para reducir el espacio */
+    font-size: 1.5rem; /* 1.5rem = 24px */
+  }
+  
+  .content-text p {
+    color: #fff;
+    font-size: 0.8rem; /* 1rem = 16px */
+    line-height: 1.4; /* Opcional: Ajusta la altura de línea para compactar más el texto */
+    text-align: justify;  /* Justifica el texto dentro del párrafo */
+  }
+  
+  .content-button {
+    background-color: #f4ce14; /* Color de fondo del botón */
+    color: rgb(0, 0, 0); /* Color del texto */
+    padding: 0.75rem 1.5rem; /* Espaciado interno del botón */
+    border: none; /* Sin borde */
+    border-radius: 0.2rem; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor a un puntero al pasa   r sobre el botón */
+    font-size: 1.3rem; /* Tamaño de la fuente */
+    text-align: center; /* Centra el texto dentro del botón */
+    margin-top: 3rem; /* Espaciado superior del botón */
+    margin-bottom: 2rem;
+    transition: background-color 0.3s ease; /* Transición suave para cambios de color */
+    align-self: flex-start;
+  }
+  
+  .content-button:hover {
+    background-color: #45a049; /* Color de fondo cuando el botón es hover */
+  }
+  
+  .content-image img {
+    max-width: auto; /* Asegura que la imagen no se desborde del contenedor hijo */
+    height: 25rem;
+  
+  }

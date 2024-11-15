@@ -1,0 +1,70 @@
+/* General Styles */
+form {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 300px;
+    margin: 1rem auto; /* Centra el formulario en la página */
+    padding: 20px;
+    gap: 20px; /* Espacio entre los elementos */
+    background-color: #f8f8f8; /* Fondo claro */
+    border: 1px solid #ddd; /* Borde suave */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  }
+  
+  /* Label Styles */
+  label {
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  /* Input and Select Styles */
+  input[type="date"],
+  input[type="number"],
+  select {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+  }
+  
+  input[type="date"]:focus,
+  input[type="number"]:focus,
+  select:focus {
+    border-color: #4caf50; /* Cambia el borde al hacer foco */
+    outline: none;
+  }
+  
+  /* Submit Button Styles */
+  input[type="submit"] {
+    background-color: #4caf50; /* Botón verde */
+    color: white;
+    font-size: 16px;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #45a049; /* Color más oscuro al pasar el mouse */
+  }
+  
+  input[type="submit"]:active {
+    transform: scale(0.98); /* Efecto al hacer clic */
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 400px) {
+    form {
+      max-width: 100%;
+      padding: 15px;
+    }
+  }
+  

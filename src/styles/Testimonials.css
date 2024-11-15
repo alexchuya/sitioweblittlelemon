@@ -1,0 +1,67 @@
+.content-testimonials {
+  background-color: #EDEFEE;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: 
+      "testimonial1-container testimonial2-container testimonial3-container";
+  gap: 3rem;
+  padding-left: 15rem;
+  padding-right: 15rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  height: auto; /* La altura se ajustará al contenido */
+  position: relative;
+}
+
+/* Ajuste de media query para pantallas pequeñas */
+@media (max-width: 768px) {
+  .content-testimonials {
+      grid-template-columns: 1fr;
+      grid-template-areas: 
+          "testimonial1-container"
+          "testimonial2-container"
+          "testimonial3-container";
+      padding-left: 2rem;
+      padding-right: 2rem;
+  }
+}
+
+.testimonial1-container,
+.testimonial2-container,
+.testimonial3-container {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  display: grid;
+  grid-template-areas: 
+      "perfil-container testimonial";
+  place-items: center;
+  min-height: 300px; /* Altura mínima */
+  min-width: 250px; /* Ancho mínimo */
+  max-width: 300px; /* Evitar que crezca mucho más */
+}
+
+/* Estilos comunes para el contenedor del perfil y testimonial */
+.perfil-container, .testimonial {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
+
+.perfil-image {
+  width: 150px; /* Se ajusta al ancho del contenedor */
+  height: 170px; /* Se ajusta a la altura del contenedor */
+  object-fit: cover; /* Cubre el contenedor manteniendo la relación de aspecto */
+  max-width: none; /* Quita cualquier restricción de ancho máximo */
+}
+
+.nombre-perfil {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 0;
+}
