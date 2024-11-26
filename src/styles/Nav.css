@@ -1,25 +1,71 @@
-/* Encabezado */
+/* Contenedor principal del header */
 .header {
   display: grid;
-  grid-template-columns: repeat(7, 1fr); /* 7 columnas */
-  gap: 2.5rem;
+  grid-template-columns: repeat(7, 1fr); /* 7 columnas iguales */
+  align-items: center; /* Centra verticalmente los elementos */
+  gap: 1rem;
   background-color: #EDEFEE;
-  padding: 1rem;
-  padding-left: 15rem;
-  padding-right: 15rem;
+  padding: 1rem 15rem;
 }
 
+/* Logo */
 .header-logo {
   grid-column: 1 / 2; /* Primera columna */
+  justify-self: start; /* Alineado a la izquierda */
 }
 
 .header-logo img {
-  width: 100%; /* Ajusta la imagen al tamaño del contenedor */
-  height: auto; /* Mantiene la proporción de la imagen */
+  max-width: 100%;
+  height: auto;
+}
+
+/* Menú de navegación */
+.header-nav {
+  grid-column: 2 / 8; /* Ocupa las columnas restantes */
+}
+
+.header-menu {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 6 columnas para los items */
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .header-item {
-  background-color: #EDEFEE;
   text-align: center;
+  cursor: pointer;
   padding: 0.5rem;
+  background-color: transparent; /* Elimina cualquier color de fondo */
+  transition: color 0.3s ease, background-color 0.3s ease; /* Efecto al hover */
+}
+
+.header-item:hover {
+  background-color: #f4ce14; /* Cambia el fondo al pasar el mouse */
+  color: #000;
+}
+
+
+@media (max-width: 768px) {
+  .header {
+    grid-template-columns: 1fr; /* Una sola columna */
+    padding: 1rem;
+  }
+
+  .header-logo {
+    justify-self: center; /* Centra el logo */
+  }
+
+  .header-nav {
+    grid-column: 1 / -1; /* Ocupa toda la fila */
+  }
+
+  .header-menu {
+    grid-template-columns: 1fr; /* Items apilados */
+    gap: 1rem;
+  }
+
+  .header-item {
+    text-align: center;
+  }
 }

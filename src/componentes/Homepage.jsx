@@ -12,22 +12,26 @@ function Homepage() {
   };
 
   return (
-    <div className="content-row">
-      <div className="content-text">
+    <main className="content-row">
+      <section className="content-text">
         <h1>Little Lemon</h1>
         <h2>Chicago</h2>
-        <p>Este es un párrafo que describe el contenido
-          relacionado con el título y subtítulo.
+        <p>
+          Este es un párrafo que describe el contenido relacionado con el título y subtítulo.
           La Joseline no me quiere y nunca me quiso, lo único que me queda es esto.
         </p>
-        <button className="content-button" onClick={handleReserveClick}>
+        <button 
+          className="content-button" 
+          onClick={handleReserveClick} 
+          aria-label="Reservar una mesa"
+        >
           Reserve a Table
         </button>
-      </div>
-      <div className="content-image">
-        <img src={restaurantfood} alt="Imagen de un gato" />
-      </div>
-    </div>
+      </section>
+      <figure className="content-image">
+        <img src={restaurantfood} alt="Comida del restaurante" />
+      </figure>
+    </main>
   );
 }
 

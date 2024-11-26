@@ -1,80 +1,83 @@
-/* Footer */
+/* Footer General */
 .footer {
-  background-color: rgb(18, 18, 20); /* Fondo negro */
-  color: #fff; /* Texto blanco */
   display: grid;
-  grid-template-areas: " restaurant navigation contact ";
-  place-items: center;
-  padding-left: 10rem;
-  padding-right: 10rem;
-  
-  
+  grid-template-columns: repeat(3, 1fr); /* Tres columnas en pantallas grandes */
+  gap: 2rem;
+  background-color: #0c1112;
+  color: #0c0f13;
+  padding: 2rem;
+  text-align: center;
 }
 
-
-.footer-imagen{
-  overflow: visible; /* Permite que el contenido sobresalga del contenedor */
-  grid-area: restaurant;
-}
-
+/* Sección de Imagen */
 .footer-imagen img {
-  max-width: 70%; /* Asegura que la imagen no se desborde del contenedor hijo */
-  height: 15rem;
-
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem; /* Bordes redondeados */
 }
 
-
-.footer-navigation {
-  grid-area: navigation;
-
-}
-
-.footer-contact {
-  grid-area: contact;
-}
-
-.footer .footer-column h3 {
+/* Sección de Navegación */
+.footer-navigation h3,
+.footer-contact h3 {
+  color: #f4ce14; /* Amarillo para los títulos */
   margin-bottom: 1rem;
-  font-size: 1.5rem;
-  color: #f4ce14;
 }
 
-.footer .footer-column ul {
+.footer-navigation ul {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
+.footer-navigation li {
+  margin-bottom: 0.5rem;
+}
 
 .LinkStyle {
-  color: white;
   text-decoration: none;
-  font-size: 1rem;
+  color: white;
   transition: color 0.3s ease;
 }
 
-.footer .footer-column ul li a:hover {
-  color: #f4ce14;
+.LinkStyle:hover {
+  color: #f4ce14; /* Amarillo al pasar el mouse */
 }
 
-.footer .social-media {
+/* Sección de Redes Sociales */
+.social-media {
   display: flex;
   justify-content: center;
   gap: 1rem;
 }
 
-.footer .social-media a {
+.social-media a {
+  font-size: 1.5rem; /* Tamaño de los íconos */
   color: white;
-  font-size: 1.5rem;
-  text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.footer .social-media a:hover {
+.social-media a:hover {
   color: #f4ce14;
 }
 
-/* Estilo para íconos */
-.footer .social-media a i {
-  font-size: 2rem;
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+  .footer {
+    grid-template-columns: 1fr; /* Una sola columna */
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .footer-imagen img {
+    max-width: 100%;
+  }
+
+  .footer-navigation ul,
+  .footer-contact {
+    margin: 0 auto; /* Centrar en móviles */
+  }
+
+  .social-media {
+    flex-direction: column; /* Cambiar a disposición vertical */
+    gap: 0.5rem;
+  }
 }

@@ -1,6 +1,6 @@
-import React from 'react'
-import greenSalad from '../imagenes/green-salad.png'
-import "../styles/Especiales.css"
+import React from 'react';
+import greenSalad from '../imagenes/green-salad.png';
+import "../styles/Especiales.css";
 
 function Especiales() {
   const products = [
@@ -25,33 +25,43 @@ function Especiales() {
   ];
 
   return (
-    <div>
-      <div className="content-row-new">
+    <section className="especiales">
+      <header className="content-row-new">
         <div className="text-column">
-          <h1>This week's specials</h1>
+          <h1>Specials of the Week</h1>
         </div>
         <div className="button-column">
-          <button className="new-button">Online Menu</button>
+          <button className="new-button" aria-label="View Online Menu">Online Menu</button>
         </div>
-      </div>
+      </header>
 
       <div className="content-foods">
         {products.map((product, index) => (
-          <div key={index} className={`product-container${index + 1}`}>
-            <img src={product.image} alt={`Imagen del ${product.title}`} className="product-image"/>
+          <article key={index} className={`product-container${index + 1}`}>
+            <img 
+              src={product.image} 
+              alt={`Delicious ${product.title}`} 
+              className="product-image"
+              aria-label={`Image of ${product.title}`}
+            />
             <div className="product-details">
               <div className="product-title-price">
                 <h2 className="product-title">{product.title}</h2>
                 <span className="product-price">{product.price}</span>
               </div>
               <p className="product-description">{product.description}</p>
-              <button className="order-button">Ordenar</button>
+              <button 
+                className="order-button" 
+                aria-label={`Order ${product.title}`}
+              >
+                Order
+              </button>
             </div>
-          </div>
+          </article>
         ))}
       </div>
-    </div>
-  )
+    </section>
+  );
 }
 
 export default Especiales;
